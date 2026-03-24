@@ -225,7 +225,6 @@ body {
     flex-direction: column;
     gap: 60px;
     width: 100%;
-    max-width: 1400px;
     margin: 100px 0;
     margin-left: 0; 
     padding: 80px 40px;
@@ -243,8 +242,8 @@ body {
 .text-about {
     height: min-content;
     padding: 30px;
-    margin: 30px;
-    width: 40%;
+    margin: 20px;
+    width: 35%;
     background: linear-gradient(135deg, #f74747, #6b080d);
     -webkit-background-clip: text;
     background-clip: text;
@@ -270,7 +269,8 @@ body {
 }
 
 .about-images img {
-    width: 500px;
+    width: 600px;
+    margin-left: 40%;
     height: auto;
     border-radius: 5%;
     border: 1px solid #ff1493;
@@ -282,13 +282,14 @@ body {
     display: flex;
     justify-content: flex-end;
     margin-top: 20px;
+    margin-right: 50px;
+    padding: 0;
 }
 
 .new-player-text {
     height: min-content;
     padding: 30px;
-    margin: 30px;
-    width: 40%;
+    width: 35%;
     background: linear-gradient(135deg, #f74747, #6b080d);
     -webkit-background-clip: text;
     background-clip: text;
@@ -299,7 +300,17 @@ body {
     border-radius: 15%;
     border: 3px solid rgba(255, 20, 147, 0.5);
     margin-left: auto;
-    margin-right: 0; 
+    margin-right: 200px; 
+}
+
+.new-player-gif {
+    width: 600px;
+    height: auto;
+    border-radius: 4%;
+    margin-left: 70px;
+    border: 2px solid #ff1493;
+    box-shadow: 0 0 50px #ff69b4;
+
 }
 
 @keyframes typing {
