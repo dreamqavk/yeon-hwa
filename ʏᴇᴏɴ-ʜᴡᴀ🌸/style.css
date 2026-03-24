@@ -416,6 +416,76 @@ body {
     color: #ffffff;
 }
 
+.kouching-container {
+    margin-top: 60px;
+    display: flex;
+    width: 100%;
+}
+
+.kouching-text {
+    height: min-content;
+    padding: 50px;
+    width: 40%;
+    background: linear-gradient(135deg, #f74747, #9e181f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 20px rgba(255, 20, 147, 0.5);
+    font-size: 22px;
+    line-height: 1.6;
+    border-radius: 15%;
+    border: 3px solid rgba(255, 20, 147, 0.5);
+    margin-left: auto;
+    margin-right: 100px;    
+}
+
+.kouching-text span {
+    font-weight: bolder;
+}
+
+.image-kouching img {
+    width: 800px;
+    height: auto;
+    border-radius: 5%;
+    border: 2px solid #ff1493;
+    box-shadow: 0 0 50px #ff69b4;
+    margin-right: 100px;
+    margin-top: 150px;
+}
+
+.why-container {
+    margin-top: 50px;
+    display: flex;
+    width: 100%;
+}
+
+.why-text {
+    height: min-content;
+    padding: 50px;
+    width: 40%;
+    background: linear-gradient(135deg, #f74747, #9e181f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 20px rgba(255, 20, 147, 0.5);
+    font-size: 22px;
+    line-height: 1.6;
+    border-radius: 15%;
+    border: 3px solid rgba(255, 20, 147, 0.5);
+    margin-left: auto;
+    margin-right: 100px;  
+}
+
+.why-image img {
+    width: 650px;
+    height: auto;
+    border-radius: 5%;
+    border: 2px solid #ff1493;
+    box-shadow: 0 0 50px #ff69b4;
+    margin-left: 180px;
+    margin-top: 30px;
+}
+
 @keyframes typing {
     0% { width: 0; }
     80% { width: 95%; }
