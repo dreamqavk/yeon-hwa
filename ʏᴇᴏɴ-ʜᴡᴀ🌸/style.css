@@ -486,6 +486,365 @@ body {
     margin-top: 30px;
 }
 
+.our-pride {
+    text-align: center;
+    width: 100%;
+    margin: 20 auto 40px auto;
+    font-size: 30px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #ff1493, #ff0000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(255, 20, 147, 0.7);
+}
+
+.text-pride {
+    height: min-content;
+    padding: 50px;
+    width: 100%;
+    background: linear-gradient(135deg, #f74747, #9e181f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 20px rgba(255, 20, 147, 0.5);
+    font-size: 22px;
+    line-height: 1.6;
+}
+
+.card-people {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 30px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 20px 40px;
+    cursor: grab;
+    scroll-behavior: smooth;
+}
+
+.card-lera,
+.card-den,
+.card-vlad,
+.card-dasha,
+.card-liza {
+    width: 400px;
+    min-width: 400px;
+    max-width: 400px;
+    padding: 20px;
+    margin: 50px 0;
+    border-radius: 15px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-lera {
+    border: 3px solid rgba(255, 20, 147, 0.5);
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('images/Chooso back.gif');
+    text-shadow: 0 0 20px rgba(255, 20, 147, 0.5);
+    box-shadow: 0 0 50px #ff69b4;
+}
+
+.card-lera:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.card-lera p {
+    display: flex;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #ff1493, #ff0000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(255, 20, 147, 0.7);
+}
+
+.card-lera h2 {
+    width: 100%;
+    font-size: 28px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #E6E6FA, #C3B091);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(255, 20, 147, 0.7);
+    margin: 10px 0;
+}
+
+.avatar {
+    border-radius: 15px;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.rank {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    margin-left: 10px;
+}
+
+.lera-rank {
+    margin-left: 10px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #c450f6, #c518e4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(255, 20, 147, 0.7);  
+}
+
+.agent {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    margin: 0 10px;
+}
+
+.agent-lera {
+    font-weight: bold;
+    background: linear-gradient(135deg, #f5f246, #ffea00);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(255, 20, 147, 0.7);  
+}
+
+.card-den {
+    width: 400px;
+    min-width: 400px;
+    max-width: 400px;
+    border: 3px solid rgba(29, 0, 157, 0.5);
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('images/aki back.gif');
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 50px #29007b;
+}
+
+.card-den p {
+    display: flex;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #6039ff, #080171);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(38, 0, 135, 0.7);
+}
+
+.card-den h2 {
+    width: 100%;
+    font-size: 28px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #0808a8, #300897);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(38, 0, 135, 0.7);
+    margin: 10px 0;
+}
+.den-rank {
+    margin-left: 10px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #04d615, #009616);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(98, 255, 135, 0.7); 
+}
+
+.den-agent {
+    font-weight: bold;
+    background: linear-gradient(135deg, #4412a0, #03229c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(34, 43, 209, 0.7);   
+}
+
+.card-vlad {
+    width: 400px;
+    min-width: 400px;
+    max-width: 400px;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('images/killua\ back.gif');
+    text-shadow: 0 0 20px rgba(149, 147, 147, 0.5);
+    box-shadow: 0 0 50px #ffffff;
+}
+
+.card-vlad p {
+    display: flex;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #c1bfca, #e0dff7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+}
+
+.card-vlad h2 {
+    width: 100%;
+    font-size: 28px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #ffffff, #f6dddd);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+    margin: 10px 0;
+}
+.vlad-rank {
+    margin-left: 10px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #04d615, #009616);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(98, 255, 135, 0.7); 
+}
+
+.vlad-agent {
+    font-weight: bold;
+    background: linear-gradient(135deg, #cac3d5, #939393);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.7);   
+}
+
+.card-dasha {
+    width: 400px;
+    min-width: 400px;
+    max-width: 400px;
+    border: 3px solid rgba(33, 27, 27, 0.5);
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('images/Raichel\ back.gif');
+    text-shadow: 0 0 20px rgba(149, 147, 147, 0.5);
+    box-shadow: 0 0 50px #000000;
+}
+
+.card-dasha p {
+    display: flex;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #646464, #2e2e2e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(121, 118, 118, 0.7);
+}
+
+.card-dasha h2 {
+    width: 100%;
+    font-size: 28px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #525050, #4e4646);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(11, 9, 9, 0.7);
+    margin: 10px 0;
+}
+.dasha-rank {
+    margin-left: 10px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #623f09, #ab6b22);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(216, 130, 38, 0.7); 
+}
+
+.dasha-agent {
+    font-weight: bold;
+    background: linear-gradient(135deg, #494949, #939393);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.7);   
+}
+ 
+.card-liza {
+    width: 400px;
+    min-width: 400px;
+    max-width: 400px;
+    border: 3px solid rgba(33, 27, 27, 0.5);
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('images/Shizuku\ back.gif');
+    text-shadow: 0 0 20px rgba(211, 49, 195, 0.5);
+    box-shadow: 0 0 50px #a51ba8;
+}
+
+.card-liza p {
+    display: flex;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #750571, #d026b3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(247, 30, 255, 0.7);
+}
+
+.card-liza h2 {
+    width: 100%;
+    font-size: 28px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #7a1285, #b92dff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(11, 9, 9, 0.7);
+    margin: 10px 0;
+}
+.liza-rank {
+    margin-left: 10px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #ff0000, #ff1a1a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(233, 64, 64, 0.7); 
+}
+
+.card-people:active {
+    cursor: grabbing;
+}
+
+.card-people::-webkit-scrollbar {
+    height: 6px;
+}
+
+.card-people::-webkit-scrollbar-track {
+    background: rgba(255, 105, 180, 0.2);
+    border-radius: 3px;
+}
+
+.card-people::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #ff1493, #ff0000);
+    border-radius: 3px;
+}
+
+.card-people::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(90deg, #ff69b4, #ff3333);
+}
+
+
 @keyframes typing {
     0% { width: 0; }
     80% { width: 95%; }
