@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgba(47, 47, 47, 0.8) 0%,  rgba(255, 6, 6, 0.5) 100%);
+    font-family: Arial, sans-serif;
+}
+
+.login-container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-information {
+    margin-bottom: 30px;
+}
+
+.login-information h1 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.login-information p {
+    color: #666;
+    font-size: 14px;
+}
+
+.login-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-tags input {
+    padding: 12px;
+    border: 1px solid #9b9a9a;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.login-tags input:focus {
+    outline: none;
+    border-color: #ff2f2f;
+}
+
+.login-tags button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.login-tags button:first-of-type {
+    background: #cd4c4c;
+    color: white;
+}
+
+.login-tags button:first-of-type:hover {
+    background: #ff0000;
+    transform: translateY(-2px);
+}
+
+.login-tags button:last-of-type {
+    background: transparent;
+    color: #000000;
+    border: 1px solid #28292d;
+}
+
+.login-tags button:last-of-type:hover {
+    background: #303032;
+    color: white;
+}
