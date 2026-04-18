@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2F2F2F;
+    font-family: "Open Sans", sans-serif;
+}
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.profile-text {
+    font-size: 14px;
+    margin-left: 5px;
+    color: #ffb7c5;
+    text-decoration: none;
+}
+
+.icon-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #ff69b4;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: #ff0000;
+    text-shadow: 0 0 15px #ff1493;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ff0000, #ff1493);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255, 20, 147, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #f74747;
+}
+
+.icon-link:hover {
+    transform: translateY(-3px);
+    background: #c21e1e;
+    box-shadow: 0 0 20px #ec3434;
+}
+
+.icon-link img {
+    width: 25px;
+    height: 25px;
+    filter: brightness(0) invert(1);
+    transition: all 0.3s ease;
+}
+
+.icon-link:hover img {
+    filter: brightness(1) invert(0);
+}

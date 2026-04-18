@@ -7,19 +7,61 @@
     <title>Авторизация</title>
 </head>
 <body>
-    <div class="login-container">
-        <div class="login-information">
-            <h1>Выполните авторизацию</h1>
-            <p>Введите Логин и Пароль</p>
+    <div class="main-container">
+        <div class="login-container">
+            <!-- Форма авторизации -->
+            <div class="form-wrapper active" id="loginForm">
+                <div class="login-information">
+                    <h1>Выполните авторизацию</h1>
+                    <p>Введите Логин и Пароль</p>
+                    <p class="error"></p>
+                </div>
+                <div class="login-tags">
+                    <input type="text" id="login" placeholder="Логин">
+                    <input type="password" id="password" placeholder="Пароль">
+                    <button type="button" id="loginBtn">Войти</button>
+                    <button type="button" id="forgotBtn">Забыли пароль?</button>
+                    <button type="button" id="registerRedirectBtn">Нет аккаунта? Зарегистрироваться</button>
+                </div>
+            </div>
+
+            <!-- Форма восстановления пароля -->
+            <div class="form-wrapper" id="forgotForm">
+                <div class="login-information">
+                    <h1>Восстановление пароля</h1>
+                    <p>Введите ваш email для сброса пароля</p>
+                    <p class="error-forgot"></p>
+                </div>
+                <div class="login-tags">
+                    <input type="email" id="resetEmail" placeholder="Email">
+                    <button type="button" id="resetBtn">Отправить ссылку</button>
+                    <button type="button" id="backToLoginBtn">Вернуться к входу</button>
+                </div>
+            </div>
+
+            <!-- Форма регистрации -->
+            <div class="form-wrapper" id="registerForm">
+                <div class="login-information">
+                    <h1>Регистрация</h1>
+                    <p>Создайте новый аккаунт</p>
+                    <p class="error-register"></p>
+                </div>
+                <div class="login-tags">
+                    <input type="text" id="regLogin" placeholder="Логин">
+                    <input type="email" id="regEmail" placeholder="Email">
+                    <input type="password" id="regPassword" placeholder="Пароль">
+                    <input type="password" id="regConfirmPassword" placeholder="Подтвердите пароль">
+                    <button type="button" id="registerBtn">Зарегистрироваться</button>
+                    <button type="button" id="backToLoginFromRegBtn">Вернуться к входу</button>
+                </div>
+            </div>
+        </div> 
+        
+        <div class="image-side" id="imageSide">
+            <img class="img-log" id="mainImage" src="images/Raichel login.png" alt="Raichel">
         </div>
-        <div class="login-tags">
-            <input type="text" id="login" placeholder="Логин">
-            <input type="password" id="password" placeholder="Пароль">
-            <button type="button" id="loginBtn">Войти</button>
-            <button type="button" id="forgotBtn">Забыли пароль?</button>
-        </div>
-    </div>
+    </div>    
     
-    <script src="js/login.js"></script>
+    <script src="node/login.js"></script>
 </body>
 </html>
