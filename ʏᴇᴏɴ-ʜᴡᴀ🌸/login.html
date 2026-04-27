@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/login.css">
-    <title>Авторизация</title>
+    <link rel="icon" href="images/logo.jpg">
+    <title>Авторизация - ʏᴇᴏɴ-ʜᴡᴀ🌸</title>
 </head>
 <body>
     <div class="main-container">
         <div class="login-container">
-            <!-- Форма авторизации -->
             <div class="form-wrapper active" id="loginForm">
                 <div class="login-information">
                     <h1>Выполните авторизацию</h1>
@@ -17,7 +17,7 @@
                     <p class="error"></p>
                 </div>
                 <div class="login-tags">
-                    <input type="text" id="login" placeholder="Логин">
+                    <input type="text" id="login" placeholder="Логин или Email">
                     <input type="password" id="password" placeholder="Пароль">
                     <button type="button" id="loginBtn">Войти</button>
                     <button type="button" id="forgotBtn">Забыли пароль?</button>
@@ -25,7 +25,6 @@
                 </div>
             </div>
 
-            <!-- Форма восстановления пароля -->
             <div class="form-wrapper" id="forgotForm">
                 <div class="login-information">
                     <h1>Восстановление пароля</h1>
@@ -39,7 +38,6 @@
                 </div>
             </div>
 
-            <!-- Форма регистрации -->
             <div class="form-wrapper" id="registerForm">
                 <div class="login-information">
                     <h1>Регистрация</h1>
@@ -49,15 +47,29 @@
                 <div class="login-tags">
                     <input type="text" id="regLogin" placeholder="Логин">
                     <input type="email" id="regEmail" placeholder="Email">
-                    <input type="password" id="regPassword" placeholder="Пароль">
+                    <input type="password" id="regPassword" placeholder="Пароль (мин. 6 символов)">
                     <input type="password" id="regConfirmPassword" placeholder="Подтвердите пароль">
+                    
+                    <div class="avatar-upload-section">
+                        <label class="avatar-label">Аватар (необязательно)</label>
+                        <div class="avatar-upload-container">
+                            <div class="avatar-preview" id="avatarPreview">
+                                <img src="https://cdn.discordapp.com/attachments/1325657863112355872/1359581535198183526/logo.png" alt="Preview">
+                            </div>
+                            <label class="avatar-upload-btn" for="regAvatar">
+                                <span>📁 Выбрать фото</span>
+                            </label>
+                            <input type="file" id="regAvatar" accept="image/*" style="display: none;">
+                        </div>
+                        <p class="avatar-hint">Поддерживаются JPG, PNG, GIF (до 5MB)</p>
+                    </div>
+                    
                     <button type="button" id="registerBtn">Зарегистрироваться</button>
                     <button type="button" id="backToLoginFromRegBtn">Вернуться к входу</button>
                 </div>
             </div>
         </div> 
-        
-        <div class="image-side" id="imageSide">
+        <div class="image-side">
             <img class="img-log" id="mainImage" src="images/Raichel login.png" alt="Raichel">
         </div>
     </div>    

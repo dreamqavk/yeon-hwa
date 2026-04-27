@@ -153,17 +153,87 @@
         </div>
     </div>
 
-    <div class="knowing">
-        <div class="knowing-text">
-            <p>Тест</p>
+   <div class="lider-board">
+    <h1> Доска почета</h1>
+    <p>Хочешь стать лучше? Хочешь чтобы твои старания были замечены? У нас есть собственная доска почета, в которой ТЫ можешь посоревноваться с друзьями и стать чуть лучше, чем был. Квесты, личные достижения и доска почёта - всё, чтобы развиваться!</p>
 
-            <div class="question-1">
-                <p>Question 1</p>
-                <input type="radio"> Answer 1
-                <input type="radio"> Answer 2
+    <!-- Статистика сервера -->
+    <div class="stats-cards" data-aos="fade-up">
+        <div class="stat-card" id="totalPlayers">
+            <div class="stat-value">0</div>
+            <div class="stat-label">Всего игроков</div>
+        </div>
+        <div class="stat-card" id="avgKda">
+            <div class="stat-value">0</div>
+            <div class="stat-label">Средний KDA</div>
+        </div>
+        <div class="stat-card" id="bestKda">
+            <div class="stat-value">0</div>
+            <div class="stat-label">Лучший KDA</div>
+        </div>
+        <div class="stat-card" id="bestWinrate">
+            <div class="stat-value">0%</div>
+            <div class="stat-label">Лучший Winrate</div>
+        </div>
+    </div>
+
+    <!-- Пьедестал (1-3 места) -->
+    <div class="podium" data-aos="fade-up">
+        <div class="podium-card place-3" id="podium3">
+            <div class="podium-rank">3 МЕСТО</div>
+            <img class="podium-avatar" src="images/avatar-user/default.png" alt="Аватар">
+            <div class="podium-name">Загрузка...</div>
+            <div class="podium-rank-name">-</div>
+            <div class="podium-stats">
+                <div class="podium-stat">
+                    <div class="podium-stat-value">0</div>
+                    <div class="podium-stat-label">KDA</div>
+                </div>
+                <div class="podium-stat">
+                    <div class="podium-stat-value">0%</div>
+                    <div class="podium-stat-label">Winrate</div>
+                </div>
+            </div>
+        </div>
+        <div class="podium-card place-1" id="podium1">
+            <div class="podium-rank">1 МЕСТО</div>
+            <img class="podium-avatar" src="images/avatar-user/default.png" alt="Аватар">
+            <div class="podium-name">Загрузка...</div>
+            <div class="podium-rank-name">-</div>
+            <div class="podium-stats">
+                <div class="podium-stat">
+                    <div class="podium-stat-value">0</div>
+                    <div class="podium-stat-label">KDA</div>
+                </div>
+                <div class="podium-stat">
+                    <div class="podium-stat-value">0%</div>
+                    <div class="podium-stat-label">Winrate</div>
+                </div>
+            </div>
+        </div>
+        <div class="podium-card place-2" id="podium2">
+            <div class="podium-rank">2 МЕСТО</div>
+            <img class="podium-avatar" src="images/avatar-user/default.png" alt="Аватар">
+            <div class="podium-name">Загрузка...</div>
+            <div class="podium-rank-name">-</div>
+            <div class="podium-stats">
+                <div class="podium-stat">
+                    <div class="podium-stat-value">0</div>
+                    <div class="podium-stat-label">KDA</div>
+                </div>
+                <div class="podium-stat">
+                    <div class="podium-stat-value">0%</div>
+                    <div class="podium-stat-label">Winrate</div>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- Карточки остальных игроков (4+ место) -->
+    <div class="other-players-grid" id="otherPlayersGrid" data-aos="fade-up">
+        <div class="loading-spinner">Загрузка игроков...</div>
+    </div>
+</div>
     
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

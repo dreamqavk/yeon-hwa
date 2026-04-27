@@ -3,27 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style/account.css">
-    <title>Личный кабинет</title>
+    <link rel="icon" href="images/icons/logo.png">
+    <title>Личный кабинет - ʏᴇᴏɴ-ʜᴡᴀ🌸</title>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="user-info">
-                Добро пожаловать, <strong id="username">...</strong>
+    <div class="navigation">
+        <div class="nav-links">
+            <a class="icon-link" href="login.html"><img src="images/icons/login.png" alt="Логин"></a>
+            <a href="index.html">Главная</a>
+            <a href="index.html#about">О нас</a>
+            <a href="index.html#features">Возможности</a>
+            <a href="knowing.html">Знания</a>
+            <a href="">Интересы</a>
+        </div>
+        
+        <div class="social-icons">
+            <a href="https://discord.gg/vu9SjwRX" target="_blank" class="icon-link">
+                <img src="images/icons/discord.png" alt="Discord">
+            </a>
+            <a href="https://t.me/chiska3" target="_blank" class="icon-link">
+                <img src="images/icons/telegram.png" alt="Telegram">
+            </a>
+            <a href="https://github.com/dreamqavk" target="_blank" class="icon-link">
+                <img src="images/icons/GitHub.png" alt="GitHub">
+            </a>
+        </div>
+    </div>
+
+    <div class="account-container">
+        <div class="profile-header" data-aos="fade-down">
+            <div class="avatar-section">
+                <img class="profile-avatar" id="profileAvatar" src="https://cdn.discordapp.com/attachments/1325657863112355872/1359581535198183526/logo.png" alt="Аватар">
+                <div class="online-status"></div>
+                <button class="change-avatar-btn" id="changeAvatarBtn">✏️</button>
+                <input type="file" id="avatarInput" accept="image/*" style="display: none;">
+            </div>
+            <div class="profile-info">
+                <h1 id="profileName">Загрузка...</h1>
+                <p class="profile-email" id="profileEmail">-</p>
+                <p class="member-since">Присоединился: <span id="memberSince">-</span></p>
+            </div>
+            <div class="riot-section">
+                <p class="riot-label">🎮 Riot ID:</p>
+                <p class="riot-value" id="riotIdDisplay">Не привязан</p>
+                <button class="link-riot-btn" id="linkRiotBtn">Привязать Riot ID</button>
             </div>
             <button class="logout-btn" id="logoutBtn">Выйти</button>
         </div>
-        
-        <div class="content">
-            <h1>Личный кабинет</h1>
-            <div class="welcome-text">
-                <p>Это ваш личный кабинет.</p>
-                <p>Здесь будет основная информация о пользователе.</p>
+
+        <div class="games-section" data-aos="fade-up">
+            <div class="games-tabs">
+                <button class="game-tab active" data-game="valorant">
+                    <img src="images/icons/Valorant.png" alt="Valorant">
+                    Valorant
+                </button>
+                <button class="game-tab" data-game="cs2">
+                    <img src="images/icons/cs2.webp" alt="CS2">
+                    CS2
+                </button>
+                <button class="game-tab" data-game="lol">
+                    <img src="images/icons/Legaue of Legends.png" alt="LoL">
+                    League of Legends
+                </button>
+            </div>
+
+            <div class="stats-container" id="valorantStats">
+                <div class="stats-header">
+                    <h2>🎮 Статистика Valorant</h2>
+                    <button class="sync-btn" id="syncStatsBtn">Обновить статистику</button>
+                </div>
+                
+
+            <div class="stats-container" id="cs2Stats" style="display: none;">
+                <div class="coming-soon">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Counter-Strike_2_Logo.svg/800px-Counter-Strike_2_Logo.svg.png" alt="CS2">
+                    <h2>CS2 Статистика</h2>
+                    <p>🚧 Скоро здесь появится подробная статистика CS2</p>
+                </div>
+            </div>
+
+            <div class="stats-container" id="lolStats" style="display: none;">
+                <div class="coming-soon">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/League_of_Legends_icon.svg/800px-League_of_Legends_icon.svg.png" alt="LoL">
+                    <h2>League of Legends</h2>
+                    <p>🚧 Скоро здесь появится подробная статистика LoL</p>
+                </div>
             </div>
         </div>
     </div>
-    
+
+    <div class="modal" id="riotModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Привязать Riot ID</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Введите ваш Riot ID в формате <strong>Имя#Тег</strong></p>
+                <p class="example">Пример: TenZ#0505</p>
+                <input type="text" id="riotIdInput" placeholder="Riot ID" class="riot-input">
+                <div class="modal-buttons">
+                    <button class="save-riot-btn" id="saveRiotBtn">Сохранить</button>
+                    <button class="cancel-riot-btn" id="cancelRiotBtn">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="node/account.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
 </body>
 </html>

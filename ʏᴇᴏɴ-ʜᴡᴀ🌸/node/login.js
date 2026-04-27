@@ -1,41 +1,3 @@
-checkAuth();
-
-const loginForm = document.getElementById('loginForm');
-const forgotForm = document.getElementById('forgotForm');
-const registerForm = document.getElementById('registerForm');
-const mainContainer = document.querySelector('.main-container');
-const mainImage = document.getElementById('mainImage');
-
-function switchForm(formToShow, formType) {
-    if (formType === 'forgot' || formType === 'register') {
-        mainContainer.classList.add('swap');
-        mainImage.style.transition = 'opacity 0.5s ease';
-        mainImage.style.opacity = '0';
-        
-        setTimeout(() => {
-            if (formType === 'forgot') {
-                mainImage.src = 'images/Raichel login.png';
-            } else if (formType === 'register') {
-                mainImage.src = 'images/Raichel login.png';
-            }
-            mainImage.style.opacity = '1';
-        }, 300);
-    } else {
-        mainContainer.classList.remove('swap');
-        
-        mainImage.style.opacity = '0';
-        setTimeout(() => {
-            mainImage.src = 'images/Raichel login.png';
-            mainImage.style.opacity = '1';
-        }, 300);
-    }
-    
-    [loginForm, forgotForm, registerForm].forEach(form => {
-        form.classList.remove('active');
-    });
-    formToShow.classList.add('active');
-}
-
 document.getElementById('loginBtn').addEventListener('click', async () => {
     const login = document.getElementById('login').value;
     const password = document.getElementById('password').value;
@@ -60,7 +22,7 @@ document.getElementById('loginBtn').addEventListener('click', async () => {
         if (data.success) {
             window.location.href = '/account.html';
         } else {
-            errorElement.textContent = data.message || 'Неверный логин или пароль';
+            errorElement.textContent = data.message || 'Неверный логин или пароль!';
         }
     } catch (error) {
         errorElement.textContent = 'Ошибка подключения к серверу';
@@ -68,19 +30,43 @@ document.getElementById('loginBtn').addEventListener('click', async () => {
 });
 
 document.getElementById('forgotBtn').addEventListener('click', () => {
-    switchForm(forgotForm, 'forgot');
+    const forgotForm = document.getElementById('forgotForm');
+    const loginForm = document.getElementById('loginForm');
+    const registerForm = document.getElementById('registerForm');
+    
+    loginForm.classList.remove('active');
+    registerForm.classList.remove('active');
+    forgotForm.classList.add('active');
 });
 
 document.getElementById('registerRedirectBtn').addEventListener('click', () => {
-    switchForm(registerForm, 'register');
+    const registerForm = document.getElementById('registerForm');
+    const loginForm = document.getElementById('loginForm');
+    const forgotForm = document.getElementById('forgotForm');
+    
+    loginForm.classList.remove('active');
+    forgotForm.classList.remove('active');
+    registerForm.classList.add('active');
 });
 
 document.getElementById('backToLoginBtn').addEventListener('click', () => {
-    switchForm(loginForm, 'login');
+    const loginForm = document.getElementById('loginForm');
+    const forgotForm = document.getElementById('forgotForm');
+    const registerForm = document.getElementById('registerForm');
+    
+    forgotForm.classList.remove('active');
+    registerForm.classList.remove('active');
+    loginForm.classList.add('active');
 });
 
 document.getElementById('backToLoginFromRegBtn').addEventListener('click', () => {
-    switchForm(loginForm, 'login');
+    const loginForm = document.getElementById('loginForm');
+    const forgotForm = document.getElementById('forgotForm');
+    const registerForm = document.getElementById('registerForm');
+    
+    registerForm.classList.remove('active');
+    forgotForm.classList.remove('active');
+    loginForm.classList.add('active');
 });
 
 document.getElementById('resetBtn').addEventListener('click', async () => {
@@ -109,9 +95,11 @@ document.getElementById('resetBtn').addEventListener('click', async () => {
         const data = await response.json();
         
         if (data.success) {
-            alert('Ссылка для восстановления отправлена на ваш email');
-            switchForm(loginForm, 'login');
-            document.getElementById('resetEmail').value = '';
+            alert('Временный пароль отправлен на ваш email');
+            const loginForm = document.getElementById('loginForm');
+            const forgotForm = document.getElementById('forgotForm');
+            forgotForm.classList.remove('active');
+            loginForm.classList.add('active');
         } else {
             errorElement.textContent = data.message || 'Ошибка восстановления';
         }
@@ -159,12 +147,11 @@ document.getElementById('registerBtn').addEventListener('click', async () => {
         const data = await response.json();
         
         if (data.success) {
-            alert('Регистрация успешна! Теперь войдите в аккаунт.');
-            switchForm(loginForm, 'login');
-            document.getElementById('regLogin').value = '';
-            document.getElementById('regEmail').value = '';
-            document.getElementById('regPassword').value = '';
-            document.getElementById('regConfirmPassword').value = '';
+            alert('Регистрация успешна! Теперь войдите.');
+            const loginForm = document.getElementById('loginForm');
+            const registerForm = document.getElementById('registerForm');
+            registerForm.classList.remove('active');
+            loginForm.classList.add('active');
         } else {
             errorElement.textContent = data.message || 'Ошибка регистрации';
         }
@@ -175,25 +162,13 @@ document.getElementById('registerBtn').addEventListener('click', async () => {
 
 document.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
-        if (loginForm.classList.contains('active')) {
+        const activeForm = document.querySelector('.form-wrapper.active');
+        if (activeForm.id === 'loginForm') {
             document.getElementById('loginBtn').click();
-        } else if (forgotForm.classList.contains('active')) {
-            document.getElementById('resetBtn').click();
-        } else if (registerForm.classList.contains('active')) {
+        } else if (activeForm.id === 'registerForm') {
             document.getElementById('registerBtn').click();
+        } else if (activeForm.id === 'forgotForm') {
+            document.getElementById('resetBtn').click();
         }
     }
 });
-
-async function checkAuth() {
-    try {
-        const response = await fetch('/api/check-auth');
-        const data = await response.json();
-        
-        if (data.authenticated) {
-            window.location.href = '/account.html';
-        }
-    } catch (error) {
-        console.error('Ошибка проверки авторизации:', error);
-    }
-}
